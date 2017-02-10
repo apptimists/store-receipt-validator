@@ -116,6 +116,24 @@ try {
 // success
 ```
 
+Thanks to [this repo](https://github.com/somewhereocean/android-market-license-verification):
+
+Validate purchase
+
+```php
+use ReceiptValidator\GooglePlay\PurchaseValidator;
+$validator = new PurchaseValidator('PUBLIC_KEY', 'PACKAGE_NAME');
+
+try {
+    $valid = $validator->verify('SIGNED_DATA', 'SIGNATURE');
+    var_dump($valid);
+} catch (Exception $e) {
+    var_dump($e);
+}
+// success
+
+```
+
 
 ### Amazon App Store ###
 
